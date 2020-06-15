@@ -1,0 +1,5 @@
+node_modules
+public
+liferay.portlet.config.js
+.idea
+build
