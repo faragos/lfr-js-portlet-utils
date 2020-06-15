@@ -1,13 +1,13 @@
 {
   "name": "@clavis/lfr-js-portlet-utils",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./start.js"
   },
   "bin": {
-    "lfr-js-start": "./bin/cli.js"
+    "lfr-js-start": "bin/cli.js"
   },
   "author": "Marco Endres",
   "license": "ISC",
@@ -29,5 +29,18 @@
   "devDependencies": {
     "webpack-hot-middleware": "^2.25.0"
   },
-  "description": ""
+  "description": "provides the webpack config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faragos/lfr-js-portlet-utils.git"
+  },
+  "keywords": [
+    "liferay",
+    "js",
+    "lfr"
+  ],
+  "bugs": {
+    "url": "https://github.com/faragos/lfr-js-portlet-utils/issues"
+  },
+  "homepage": "https://github.com/faragos/lfr-js-portlet-utils#readme"
 }
