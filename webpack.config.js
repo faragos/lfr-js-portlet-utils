@@ -14,17 +14,19 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    new require('copy-webpack-plugin')([path.resolve(path.join(__dirname, 'assets'))]),
-    new HtmlWebpackPlugin({template: '.webpack/index.html',})
+    new require('copy-webpack-plugin')([process.cwd() + '/assets']),
+    new HtmlWebpackPlugin({template: './.webpack/index.html',})
   ],
   module: {
     rules: [
       {
-        test: /src\\.*\.js$/,
+        test: /\.js?$/,
+        exclude: /node_modules/,
         use: 'babel-loader'
       },
       {
-        test: /src\\.*\.scss$/,
+        test: /\.scss?$/,
+        exclude: /node_modules/,
         use: ['sass-loader']
       }]
   },
@@ -33,8 +35,5 @@ module.exports = {
     alias: {
       cwd: process.cwd(),
     }
-  },
-  optimization: {
-    minimize: false
   }
 }

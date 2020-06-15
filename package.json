@@ -1,6 +1,6 @@
 {
   "name": "@clavis/lfr-js-portlet-utils",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,6 @@
     "copy-webpack-plugin": "4.6.0",
     "express": "^4.17.1",
     "html-webpack-plugin": "^4.3.0",
-    "lfr-js-portlet-bootstrapper": "^0.0.1",
     "webpack": "4.29.6",
     "webpack-cli": "3.3.0",
     "webpack-dev-middleware": "^3.7.2",
@@ -24,7 +23,8 @@
     "babel-cli": "6.26.0",
     "babel-loader": "7.1.5",
     "babel-preset-env": "1.7.0",
-    "babel-preset-react": "6.24.1"
+    "babel-preset-react": "6.24.1",
+    "@clavis/lfr-js-portlet-bootstrapper": "^0.0.1"
   },
   "devDependencies": {
     "webpack-hot-middleware": "^2.25.0"

@@ -1,4 +1,4 @@
-let bootstrapper = require('lfr-js-portlet-bootstrapper')
+let bootstrapper = require('@clavis/lfr-js-portlet-bootstrapper')
 var fs = require('fs')
 
 module.exports = function (configPath, basePath) {
