@@ -24,7 +24,7 @@
     "babel-loader": "7.1.5",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
-    "@clavis/lfr-js-portlet-bootstrapper": "^0.0.1"
+    "@clavis/lfr-js-portlet-bootstrapper": "^0.0.3"
   },
   "devDependencies": {
     "webpack-hot-middleware": "^2.25.0"

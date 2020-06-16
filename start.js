@@ -49,7 +49,7 @@ function getConfig (configPath, basePath) {
   if (!fs.existsSync(fullConfigPath)) {
     console.info(fullConfigPath + ' not Found')
     console.info('using config from ./' + configPath)
-    return require('./' + configPath)
+    return require(__dirname + '/' + configPath)
   }
 
   return require(fullConfigPath)

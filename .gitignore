@@ -3,3 +3,4 @@ public
 liferay.portlet.config.js
 .idea
 build
+package-lock.json
