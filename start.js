@@ -22,6 +22,11 @@ module.exports = function (configPath, basePath) {
     contentBase: sourcesPath + '../',
     hot: true,
     host: config.host,
+    proxy: {
+      '**': {
+        target: config.protocol + '://' + config.host + ':' + config.originPort,
+      }
+    }
   }
 
   webpackDevServer.addDevServerEntrypoints(webpackConfig, options)
@@ -42,7 +47,8 @@ function getConfig (configPath, basePath) {
   let fullConfigPath = basePath + '/' + configPath
 
   if (!fs.existsSync(fullConfigPath)) {
-    console.error(fullConfigPath + ' not Found')
+    console.info(fullConfigPath + ' not Found')
+    console.info('using config from ./' + configPath)
     return require('./' + configPath)
   }
 
