@@ -1,8 +1,10 @@
 let bootstrapper = require('@clavis/lfr-js-portlet-bootstrapper')
 var fs = require('fs')
 
-module.exports = function (configPath, basePath) {
-  bootstrapper(configPath, basePath)
+module.exports = async function (configPath, basePath) {
+  await bootstrapper(configPath, basePath)
+
+  console.info('Starting Webpack Config')
 
   let config = getConfig(configPath, basePath)
 
@@ -36,7 +38,6 @@ module.exports = function (configPath, basePath) {
   server.listen(config.port, config.host, () => {
     console.log('dev server listening on port ' + config.port)
   })
-
 }
 
 function getConfig (configPath, basePath) {
