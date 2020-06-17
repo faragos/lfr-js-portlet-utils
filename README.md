@@ -27,6 +27,10 @@ deploy your portlet on the liferay instance and place it on the root so you see 
 npm run start
 ```
 
+## Example usage
+
+https://github.com/faragos/lfr-js-portlet-example
+
 # Config
 You can configure the npm task with a 'liferay.portlet.config.js' in the root of the module. Here is the default config, which will be taken when no custom config is found:
 
