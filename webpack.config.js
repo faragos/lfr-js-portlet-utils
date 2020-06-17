@@ -1,12 +1,11 @@
-var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+let path = require('path')
+let HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: [
-    path.resolve(path.join(__dirname, 'src/footer.js')),
-    process.cwd() + '/src/index.js'
+    path.resolve(path.join(__dirname, 'src/footer.js'))
   ],
   output: {
     path: path.resolve(path.join(__dirname, 'build')),

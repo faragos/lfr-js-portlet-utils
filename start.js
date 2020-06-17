@@ -19,6 +19,7 @@ module.exports = async function (configPath, basePath) {
   const webpack = require('webpack')
 
   const webpackConfig = require('./webpack.config.js')
+  webpackConfig.entry.push(process.cwd() + config.sources.js)
   webpackConfig.resolve.alias.mainFn = sourcesPath
   const options = {
     contentBase: sourcesPath + '../',
