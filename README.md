@@ -22,6 +22,12 @@ npm install -s @clavis/lfr-js-portlet-utils
 ### Place and Configure Portlet
 deploy your portlet on the liferay instance and place it on the root so you see it when you call 'localhost:8080' for example. Be sure the page is public. Authorization is not supported so far.
 
+### Disable Auth Token
+So far I didn't find a solution to keep the Auth Token enabled. I'm open for any hints. I would like to implement a Basic Auth for example.
+```
+auth.token.check.enabled=false
+```
+
 ### Run
 ```
 npm run start
