@@ -26,7 +26,23 @@ module.exports = {
       {
         test: /\.scss?$/,
         exclude: /node_modules/,
-        use: ['sass-loader']
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          }
+        ]
       }]
   },
   resolve: {
@@ -34,5 +50,8 @@ module.exports = {
     alias: {
       cwd: process.cwd(),
     }
+  },
+  resolveLoader: {
+    modules: ['node_modules', 'node_modules/@clavis/lfr-js-portlet-utils/node_modules'],
   }
 }
