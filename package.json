@@ -1,6 +1,6 @@
 {
   "name": "@clavis/lfr-js-portlet-utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,7 +27,9 @@
     "webpack-cli": "3.3.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "3.2.1",
-    "webpack-inject-plugin": "^1.5.4"
+    "webpack-inject-plugin": "^1.5.4",
+    "eslint": "^7.3.1",
+    "eslint-loader": "^4.0.2"
   },
   "devDependencies": {
     "webpack-hot-middleware": "^2.25.0"
