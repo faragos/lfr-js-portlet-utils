@@ -48,12 +48,17 @@ function getConfig (configPath, basePath) {
 
   let fullConfigPath = basePath + '/' + configPath
 
-  if (!fs.existsSync(fullConfigPath)) {
+  let finalConfig
+  const defaultConfig = require(__dirname + '/' + configPath)
+  if (fs.existsSync(fullConfigPath)) {
+    const userConfig = require(fullConfigPath)
+    finalConfig = {...defaultConfig, ...userConfig}
+  } else {
     console.info(fullConfigPath + ' not Found')
     console.info('using config from ./' + configPath)
-    return require(__dirname + '/' + configPath)
+    finalConfig = defaultConfig
   }
 
-  return require(fullConfigPath)
+  return finalConfig
 }
 

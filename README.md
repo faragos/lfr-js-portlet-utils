@@ -62,6 +62,8 @@ module.exports = {
 
 ```
 
+But there is also the possiblity to only configure the wrong values and your and the default config get merged
+
 ## protocol
 Used to find the protocol which your Portal runs
 
