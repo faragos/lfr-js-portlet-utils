@@ -1,4 +1,6 @@
-Tool, which downloads a liferay page from a liferay portal and configures a webpack with that fetched index.html. Which automaticall loads your index.js from your modul into webpack also
+Improves your development with portlets that are created with `yo liferay-js` 🥳🎉
+
+Tool, which downloads a liferay page from a liferay portal and configures a webpack with the fetched index.html. Which automatically loads your index.js from your js-portlet into webpack.
 
 # Advantages of lfr-js-start to the lnbs-start:
 - You are in the context of a liferay page
@@ -28,7 +30,7 @@ auth.token.check.enabled=false
 ```
 
 ### Place and Configure Portlet
-deploy your portlet on the Liferay instance and place it on the root so you see it when you call 'localhost:8080' for example. Be sure the page is public. Authorization is not supported so far.
+Deploy your portlet on the Liferay instance and place it on the root so you see it when you call 'localhost:8080' for example. Be sure the page is public. Authorization is not supported so far.
 
 ### Run
 ```
@@ -95,4 +97,4 @@ Specifies which attribute of the parsed config is the id.
 The sources attribute groups all the attributes which depend on the sources
 
 #### js
-This is the main js file. The entrypoint you can say for webpack.
+This is the main js file. The entrypoint for webpack.
