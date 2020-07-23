@@ -98,3 +98,13 @@ The sources attribute groups all the attributes which depend on the sources
 
 #### js
 This is the main js file. The entrypoint for webpack.
+
+## user 
+Specifies the username/email with that you can log in. Currently used to set a variable called "LIFERAY_USER" \
+Default is "test@liferay.com" \
+Careful this variable isn't available in the deployment on the liferay!
+
+## password
+Specifies the password for the user you want to log in. Currently used to set a variable called "LIFERAY_PASSWORD"\
+Default value is "test" \
+Careful this variable isn't available in the deployment on the liferay!

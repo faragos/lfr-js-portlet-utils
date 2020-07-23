@@ -13,5 +13,7 @@ module.exports = {
   },
   sources: {
     js: '/src/index.js'
-  }
+  },
+  user: 'test@liferay.com',
+  password: 'test'
 }
