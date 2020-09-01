@@ -1,5 +1,6 @@
 let path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   mode: 'development',
@@ -14,7 +15,8 @@ module.exports = {
   },
   plugins: [
     new require('copy-webpack-plugin')([process.cwd() + '/assets']),
-    new HtmlWebpackPlugin({template: './.webpack/index.html',})
+    new HtmlWebpackPlugin({template: './.webpack/index.html',}),
+    new VueLoaderPlugin()
   ],
   module: {
     rules: [
@@ -53,10 +55,15 @@ module.exports = {
             },
           }
         ]
-      }]
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.vue'],
     alias: {
       cwd: process.cwd(),
     }
