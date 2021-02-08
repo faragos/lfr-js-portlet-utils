@@ -21,6 +21,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto",
+      },
+      {
         enforce: 'pre',
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
