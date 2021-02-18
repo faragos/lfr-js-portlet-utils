@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         enforce: 'pre',
-        test: /\.(js|vue)$/,
+        test: /\.(ts|js|vue)$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
       },
@@ -35,6 +35,14 @@ module.exports = {
         test: /\.js?$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.ts?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        }
       },
       {
         test: /\.css$/i,
@@ -68,7 +76,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.vue', '.ts'],
     alias: {
       cwd: process.cwd(),
     }
