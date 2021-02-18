@@ -1,5 +1,5 @@
 let bootstrapper = require('@clavis/lfr-js-portlet-bootstrapper')
-var fs = require('fs')
+let fs = require('fs')
 
 module.exports = async function (configPath, basePath) {
   await bootstrapper(configPath, basePath)
