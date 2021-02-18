@@ -1,13 +1,12 @@
-let bootstrapper = require('@clavis/lfr-js-portlet-bootstrapper')
-let fs = require('fs')
+const bootstrapper = require('@clavis/lfr-js-portlet-bootstrapper')
+const fs = require('fs')
 
 module.exports = async function (configPath, basePath) {
   await bootstrapper(configPath, basePath)
 
   console.info('Starting Webpack Config')
 
-  let config = getConfig(configPath, basePath)
-
+  const config = getConfig(configPath, basePath)
   const sourcesPath = basePath + config.sources.js
 
   if (!fs.existsSync(sourcesPath)) {
@@ -25,6 +24,7 @@ module.exports = async function (configPath, basePath) {
   }))
   webpackConfig.entry.push(process.cwd() + config.sources.js)
   webpackConfig.resolve.alias.mainFn = sourcesPath
+
   const options = {
     contentBase: sourcesPath + '../',
     hot: true,
@@ -50,7 +50,7 @@ function getConfig (configPath, basePath) {
     configPath = 'liferay.portlet.config.js'
   }
 
-  let fullConfigPath = basePath + '/' + configPath
+  const fullConfigPath = basePath + '/' + configPath
 
   let finalConfig
   const defaultConfig = require(__dirname + '/' + configPath)
