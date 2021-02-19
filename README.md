@@ -7,6 +7,7 @@ Tool, which downloads a liferay page from a liferay portal and configures a webp
 - You have all the window.Liferay.* functions
 - You get the correct Language keys
 - You have the the original config of the portlet
+- Vue and Typescript files work
 
 # How to Use
 
