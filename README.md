@@ -11,6 +11,9 @@ automatically loads your index.js from your js-portlet into webpack.
 - You have the original config of the portlet
 - Vue and Typescript files work
 
+Video how it works:
+https://www.youtube.com/watch?v=qO-LYsQ_6Ac
+
 # How to Use
 
 ## How to install
