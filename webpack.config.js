@@ -23,11 +23,11 @@ module.exports = {
       {
         test: /\.mjs$/,
         include: /node_modules/,
-        type: "javascript/auto",
+        type: 'javascript/auto',
       },
       {
         enforce: 'pre',
-        test: /\.(ts|js|vue)$/,
+        test: /\.(ts|tsx|js|vue)$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
       },
@@ -37,7 +37,7 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.ts?$/,
+        test: /\.(ts|tsx)$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
@@ -76,7 +76,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.vue', '.ts'],
+    extensions: ['.js', '.vue', '.ts', '.tsx'],
     alias: {
       cwd: process.cwd(),
     }

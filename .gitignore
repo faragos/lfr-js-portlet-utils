@@ -2,4 +2,3 @@ node_modules
 public
 .idea
 build
-package-lock.json
