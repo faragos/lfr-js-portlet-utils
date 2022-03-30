@@ -22,7 +22,6 @@ module.exports = {
     rules: [
       {
         test: /\.mjs$/,
-        exclude: /node_modules/,
         type: 'javascript/auto',
       },
       {
