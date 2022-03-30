@@ -86,6 +86,10 @@ Used to find the host on which your Portal runs
 
 Used to find the port on which your Portal runs
 
+## originAbsoluteUrl
+
+Used to request static resources from your Portal
+
 ## port
 
 Specifies on which port webpack runs

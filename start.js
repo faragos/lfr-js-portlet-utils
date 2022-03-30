@@ -25,15 +25,27 @@ module.exports = async function (configPath, basePath) {
   webpackConfig.entry.push(process.cwd() + config.sources.js)
   webpackConfig.resolve.alias.mainFn = sourcesPath
 
+  let headers = {}
+  if (config.user && config.password) {
+      headers = { 'Authorization': `Basic ${Buffer.from(config.user + ':' + config.password).toString('base64')}` }
+  }
   const options = {
+    headers: {
+      'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Range',
+      'access-control-allow-origin': '*',
+    },
+    allowedHosts: ['all'],
     contentBase: sourcesPath + '../',
     hot: true,
     host: config.host,
     proxy: {
       '**': {
-        target: config.protocol + '://' + config.host + ':' + config.originPort,
-      }
-    }
+        target: config.protocol + '://' + config.host + ':' + config.port,
+        router: () => config.originAbsoluteUrl,
+        changeOrigin: true,
+        headers: { headers }
+      },
+    },
   }
 
   webpackDevServer.addDevServerEntrypoints(webpackConfig, options)

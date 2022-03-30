@@ -2,6 +2,7 @@ module.exports = {
   protocol: 'http',
   host: 'localhost',
   originPort: 8080,
+  originAbsoluteUrl: 'http://localhost:80',
   port: 3000,
   remove: {
     script: [],
