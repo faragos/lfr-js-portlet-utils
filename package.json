@@ -1,6 +1,6 @@
 {
   "name": "@clavis/lfr-js-portlet-utils",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
   "author": "Marco Endres",
   "license": "ISC",
   "dependencies": {
-    "@clavis/lfr-js-portlet-bootstrapper": "^0.2.0",
+    "@clavis/lfr-js-portlet-bootstrapper": "^0.3.0",
     "@babel/cli": "^7.11.5",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
